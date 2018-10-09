@@ -20,7 +20,9 @@ public class playercollition : MonoBehaviour {
             else
                 lives--;
         }
+       
     }
+
 
     public void lifesNumber(){
         lives++;

@@ -8,5 +8,11 @@ public class LifeMovement : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         Rb.AddForce(0, 0, -backwardForce * Time.deltaTime);
+        if (transform.position.z < -40)
+        {
+            Destroy(gameObject);
+
+        }
+
     }
 }

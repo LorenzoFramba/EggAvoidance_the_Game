@@ -11,20 +11,21 @@ public class VitaTouch : playercollition
     void Update()
     {
         UpdateText(lives);
-        //Debug.Log("numero di vite: " + lives);
+        //Debug.Log("numero di vite! : " + lives);
     }
 
-    void onTriggerEnter(Collider coll)
+    void OnCollisionEnter(Collision coll)
     {
-        if (coll.gameObject.tag == "Life")
+        if (coll.collider.tag == "Life" )
         {
             Debug.Log("hai triggerato qualcosa");
-            Destroy(gameObject);
-            FindObjectOfType<playercollition>().lifesNumber();
-           // playercollition.lifesNumber();
+          //  Destroy(coll.collider.gameObject);
+            lifesNumber();
+
         }
 
     }
+
     public void UpdateText(int N)
     {   
 

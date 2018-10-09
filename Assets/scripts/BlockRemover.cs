@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class BlockRemover : MonoBehaviour
 {
     public static float points = 0f;
-    public Transform playermovement; 
 
     public void IncrementScore(float tmp)
     {
@@ -45,7 +44,7 @@ public class BlockRemover : MonoBehaviour
         //  near();
       //  Debug.Log("X! " + playermovement.position.x);
      //   Debug.Log("X! " + transform.position.x);
-        if (transform.position.z < -20)
+        if (transform.position.z < -40)
         {
             Destroy(gameObject);
             IncrementScore(0.20f);
