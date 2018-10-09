@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Obstacle
   - Life
+  - Undefined
+  - SferaVerde
   layers:
   - Default
   - TransparentFX

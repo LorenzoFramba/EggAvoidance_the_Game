@@ -7,20 +7,29 @@ public class playercollition : MonoBehaviour {
 
 
 
-    void OnCollisionEnter(Collision collisioninfo)
+    void OnCollisionEnter(Collision coll)
     {
-
-        if (collisioninfo.collider.tag == "Obstacle")
+        switch (coll.collider.tag)
         {
-            if (lives == 0)
-            {
-                FindObjectOfType<gameManager>().EndGame();
-                lives = 1;
-            }
-            else
-                lives--;
+            case "Obstacle":
+                if (lives == 0)
+                {
+                    FindObjectOfType<gameManager>().EndGame();
+                    lives = 1;
+                }
+                else
+                    lives--;
+                break;
+
+            case "SferaVerde":
+                Destroy(coll.collider.gameObject);
+                lifesNumber();
+                break;
+            case "SferaBlu" :
+
+                break;
+
         }
-       
     }
 
 

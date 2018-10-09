@@ -49,7 +49,6 @@ public class BlockSpawner : BlockRemover {
                 preson = true;
             return preson;
         }
-
         return preson;
     }
     void spawnBlocks(int nBlocchi){

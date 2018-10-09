@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BlockRemover : MonoBehaviour
 {
     public static float points = 0f;
+    public  playermovement Pl;
 
     public void IncrementScore(float tmp)
     {
@@ -21,7 +22,7 @@ public class BlockRemover : MonoBehaviour
     public bool near()
     {
         bool vic = false;
-        float l = playermovement.position.x;
+        float l = Pl.transform.position.x;
 
             if (transform.position.x > l){
                 if((transform.position.x - l) <= 1){
